@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Secure your gaming setup at King'z Arena. Fill out our online booking form to reserve high-speed PCs, consoles, or VR spaces for your next session.">
+    <meta name="keywords" content="book gaming PC, reserve gaming slot, King'z Arena booking, LAN cafe booking, esports arena reservation">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_css/style.css">
+    <title>Enquire - King'z Arena</title>
+</head>
+
+<body>
+    <!-- HEADER: Contains navigation -->
+    <header>
+        <h1 id="main-title" class="fade-text">Enquire About Our Services</h1>
+        <nav aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="enquire.html" class="active">Enquire</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- MAIN: Grid layout-->
+    <main class="grid-layout">
+
+        <!-- Form: Booking inputs-->
+        <section class="card form-section">
+            <h2>Book Your Slot Now</h2>
+            <p>Fill out the form below to book your preferred gaming slot. All fields marked with * are required.</p>
+
+            <form action="#" method="post" class="enquiry-form">
+
+                <!-- Fieldset 1: Personal Details -->
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Your details</legend>
+
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required
+                            placeholder="gamer@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" required
+                            placeholder="082 123 4567">
+                    </div>
+                </fieldset>
+
+                <!-- Fieldset 2: Booking Details -->
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Your booking</legend>
+
+                    <div class="form-group">
+                        <label for="package">Select Package *</label>
+                        <select id="package" name="package" required>
+                            <option value="">-- Choose a Package --</option>
+                            <option value="bruv">Bruv Package (R120)</option>
+                            <option value="premium">Premium Package (R200)</option>
+                            <option value="throne">On The Throne Package (R450)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message (optional)</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Group size, tournament question, special requests..."></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-cta">Submit Enquiry</button>
+            </form>
+        </section>
+
+        <!--Secondary information and booking tips -->
+        <aside class="card aside-tips">
+            <h2>Why Book With Us?</h2>
+            
+            <!-- Promotional Callout Block -->
+            <div class="promo-callout">
+                <h3>🔥 First-Time Gamer?</h3>
+                <p>Let us know in your message and get a free energy drink on the house!</p>
+            </div>
+
+            <!-- Icon-driven Feature List -->
+            <ul class="tips-list">
+                <li class="promo-item">
+                    <span class="promo-icon" aria-hidden="true">⚡</span>
+                    <div class="promo-text">
+                        <strong>Zero Latency</strong>
+                        <span>Gigabit fiber means you never lag during crucial matches.</span>
+                    </div>
+                </li>
+                <li class="promo-item">
+                    <span class="promo-icon" aria-hidden="true">🎮</span>
+                    <div class="promo-text">
+                        <strong>Pro Hardware</strong>
+                        <span>RTX 4090s and 240Hz monitors at every gaming station.</span>
+                    </div>
+                </li>
+                <li class="promo-item">
+                    <span class="promo-icon" aria-hidden="true">🕒</span>
+                    <div class="promo-text">
+                        <strong>Flexible Hours</strong>
+                        <span>We are open 10:00 AM - 10:00 PM, Monday - Saturday.</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="promo-footer">
+                <p>Prefer to talk? <br> Call Downtown: <strong>031-456-7890</strong></p>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER-->
+    <footer>
+        <p>&copy; 2026 King'z Arena. All rights reserved.</p>
+    </footer>
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="_js/script.js"></script>
+</body>
+
+</html>

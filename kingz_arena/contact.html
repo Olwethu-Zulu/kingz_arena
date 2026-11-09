@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about King'z Arena, our vision, mission, and the team behind the ultimate esports experience, it's in the Game!!">
+    <meta name="keywords" content="King'z Arena, esports, gaming, gaming center, competitive gaming, gaming community">
+    <meta name="author" content="King'z Arena">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="_css/style.css">
+    
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    
+    <title>King'z Arena - Contact</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="main-title" class="fade-text">Contact Us</h1>
+        <nav aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="enquire.html">Enquire</a>
+            <a href="contact.html" class="active" aria-current="page">Contact</a>
+         </nav>
+    </header>
+
+    <main class="layout-contact">
+        <section class="card">
+            <h2>Get In Touch</h2>
+            
+            <section class="card form-section">
+                <h2>Send a Direct Message</h2>
+                <p>Use the form below to send a general message to our team.</p>
+
+                <form id="contactForm" class="contact-form" novalidate>
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Contact Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="contact-name">Full Name *</label>
+                            <input type="text" id="contact-name" name="contact-name" required placeholder="John Doe">
+                            <span class="error-message" id="contact-name-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email Address *</label>
+                            <input type="email" id="contact-email" name="contact-email" required placeholder="gamer@example.com">
+                            <span class="error-message" id="contact-email-error"></span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Message Details</legend>
+
+                        <div class="form-group">
+                            <label for="message-type">Type of Message *</label>
+                            <select id="message-type" name="message-type" required>
+                                <option value="">-- Select Message Type --</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="feedback">Feedback / Suggestions</option>
+                            </select>
+                            <span class="error-message" id="message-type-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Full Message *</label>
+                            <textarea id="contact-message" name="contact-message" rows="5" required placeholder="Type your message here..."></textarea>
+                            <span class="error-message" id="contact-message-error"></span>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn-cta" id="contact-submit-btn">Send Email</button>
+                    <div id="contact-form-response" class="form-response-msg" aria-live="polite"></div>
+                </form>
+            </section>
+            
+            <p style="margin-bottom: 2rem;"><strong>Reach</strong> out to our team or visit one of our gaming centers or use our social media platforms to connect with us.</p>
+
+        
+            <div class="map-container" style="height: 400px; border-radius: 8px; overflow: hidden; border: 1px solid #23233a;">
+                <div id="map-main" style="height: 100%; width: 100%; position: relative;"></div>
+            </div>
+
+        </section>
+
+        <section class="card">
+            <h2>Our Locations</h2>
+            <p>Find us at any of our gaming centers across the city.</p>
+
+            <div class="locations-grid">
+                <article class="branch-card">
+                    <h3>Downtown Hub</h3>
+                    <p><strong>Address:</strong> 123 Main Street, Downtown</p>
+                    <p><strong>Phone:</strong> (+27) 31-456-7890</p>
+                    <p><strong>Email:</strong> info@kingzarena.com</p>
+                </article>
+
+                <article class="branch-card">
+                    <h3>Crazy Steve's</h3>
+                    <p><strong>Address:</strong> 456 Side Street, Uptown</p>
+                    <p><strong>Phone:</strong> (+27) 31-987-6543</p>
+                    <p><strong>Email:</strong> info@kingzarena.com</p>
+                </article>
+            </div>
+
+            <p><strong>Hours:</strong> 10:00 AM - 10:00 PM Monday - Saturday</p>
+        </section>
+
+        <section>
+            <h2>Support</h2>
+            <p><strong>General Inquiries:</strong> For any general questions or feedback, please email us at support@kingzarena.com.</p>
+            <p><strong>Tournament Inquiries:</strong> For information about upcoming tournaments, please email us at esports@kingzarena.com.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 King'z Arena. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="_js/script.js"></script>
+</body>
+
+</html>

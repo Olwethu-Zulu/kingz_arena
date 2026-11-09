@@ -1,0 +1,600 @@
+/* ============================================================ */
+/* KING'S ARENA                  */
+/* ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,500;0,700;0,800;1,800&display=swap');
+
+:root {
+    --bg: #080811;
+    --panel: #11111f;
+    --field: #0b0b16;
+    --line: #23233a;
+    --text: #ffffff;
+    --muted: #9a9ab5;
+    --green: #39ff7a;
+    --cyan: #22d3ee;
+    --radius: 20px;
+    --gutter: max(24px, calc((100% - 1180px) / 2));
+}
+
+/* ---------- 1. Base & Resets ---------- */
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, video, iframe { 
+    max-width: 100%; 
+    height: auto;
+    display: block; 
+}
+
+a { 
+    color: inherit; 
+    text-decoration: none; 
+    transition: color 0.2s ease; 
+}
+
+ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+p { 
+    margin: 0 0 1rem 0; 
+    color: var(--muted); 
+}
+
+strong { 
+    color: var(--text); 
+}
+
+/* Typography Headings */
+h1, h2, h3, h4, h5, h6 { 
+    margin: 0 0 1rem 0; 
+    font-family: "Montserrat", sans-serif; 
+    text-transform: uppercase; 
+    color: var(--text);
+    letter-spacing: 0.03em;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+}
+
+h3 { 
+    font-size: 1.15rem; 
+    font-weight: 700; 
+}
+
+/* Focus & Accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, .lightbox-trigger:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ---------- 2. Header & Navigation ---------- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px var(--gutter);
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#main-title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--text);
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+header nav { 
+    display: flex; 
+    gap: 28px; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav a {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 0;
+    position: relative;
+}
+
+header nav a:hover { 
+    color: var(--text); 
+}
+
+header nav a.active { 
+    color: var(--cyan); 
+}
+
+header nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--cyan);
+}
+
+/* ---------- 3. Layout Structure & Cards ---------- */
+main { 
+    padding: 48px var(--gutter) 80px; 
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card, .card-tier, .team-card, .branch-card, .aside-tips, .form-section {
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--panel);
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card > h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card > h2::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--cyan);
+}
+
+.media-container, .fluid-media {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    margin-top: 1.5rem;
+}
+
+.fluid-media {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ---------- 4. Call-to-Action Buttons ---------- */
+.btn-cta {
+    display: inline-block;
+    padding: 13px 26px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--green);
+    color: #04140a !important;
+    font: 700 13px "Inter", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 0 22px rgba(57, 255, 122, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    text-align: center;
+}
+
+.btn-cta:hover { 
+    transform: translateY(-2px);
+    box-shadow: 0 0 28px rgba(57, 255, 122, 0.5);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--green) !important;
+    border: 2px solid var(--green);
+    box-shadow: none;
+}
+
+.btn-outline:hover { 
+    background: rgba(57, 255, 122, 0.1); 
+    transform: translateY(-2px);
+}
+
+/* ---------- 5. Forms, Controls & Inputs ---------- */
+.form-fieldset {
+    border: 1px solid var(--line);
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    background: var(--bg);
+}
+
+.form-legend {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0 8px;
+}
+
+.form-group { 
+    margin-bottom: 1.2rem; 
+}
+
+label {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--field);
+    color: var(--text);
+    font: 500 14px "Inter", sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder, textarea::placeholder { 
+    color: #5f5f7a; 
+}
+
+input:focus, textarea:focus, select:focus { 
+    border-color: var(--cyan); 
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.15);
+    outline: none;
+}
+
+select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a9ab5' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+}
+
+.error-message, .field-error {
+    display: block;
+    color: #ff395c;
+    font-size: 11px;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+.form-response-msg {
+    margin-top: 1.5rem;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+}
+
+.form-response-msg.success-msg {
+    display: block;
+    background: rgba(34, 211, 238, 0.1);
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+}
+
+/* ---------- 6. Team Cards & Galleries ---------- */
+.team-section .flex-container {
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.team-card {
+    text-align: center;
+    flex: 1 1 240px;
+    background: var(--field);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.avatar-img {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 2px solid var(--cyan);
+    padding: 4px;
+    background: var(--panel);
+}
+
+.team-role {
+    color: var(--cyan);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.team-desc { 
+    font-size: 13px; 
+    margin: 0; 
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.image-gallery figure {
+    margin: 0;
+    background: var(--field);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.image-gallery figure:hover {
+    border-color: var(--cyan);
+    transform: translateY(-3px);
+}
+
+.image-gallery img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.image-gallery figcaption {
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+    text-align: center;
+    border-top: 1px solid var(--line);
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding: 2rem;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(8, 8, 17, 0.95);
+    backdrop-filter: blur(8px);
+}
+
+.lightbox-modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox-content {
+    max-width: min(90vw, 1100px);
+    max-height: 80vh;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    box-shadow: 0 0 50px rgba(34, 211, 238, 0.25);
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px; right: 36px;
+    color: var(--muted);
+    font-size: 38px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+}
+
+.lightbox-close:hover { 
+    color: var(--cyan); 
+}
+
+/* ---------- 7. Product Tiers & Packages ---------- */
+.product-package {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 300px;
+    background: var(--field);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    position: relative;
+}
+
+.tier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.price-tag {
+    color: var(--green);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.package-features { 
+    margin-bottom: 1.8rem; 
+}
+
+.package-features li {
+    font-size: 13px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+}
+
+.package-features li:last-child {
+    border-bottom: none;
+}
+
+.tier-featured {
+    border-color: var(--green);
+    background: linear-gradient(180deg, rgba(57, 255, 122, 0.03) 0%, var(--field) 100%);
+}
+
+.badge {
+    position: absolute;
+    top: -12px; right: 24px;
+    background: var(--green);
+    color: #04140a;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 0 15px rgba(57, 255, 122, 0.4);
+}
+
+/* ---------- 8. Contact Map & Locations ---------- */
+.map-container {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--field);
+    margin-bottom: 1.5rem;
+}
+
+#map-main {
+    width: 100%;
+    height: 450px;
+    min-height: 450px;
+    display: block;
+    z-index: 1;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: var(--panel) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--line);
+    border-radius: 10px !important;
+}
+
+.leaflet-popup-content b { 
+    color: var(--green) !important; 
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.branch-card {
+    background: var(--field);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+/* ---------- 9. Footer ---------- */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 36px var(--gutter);
+    border-top: 1px solid var(--line);
+    background: #05050c;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* ---------- 10. Responsive Breakpoints ---------- */
+@media (max-width: 768px) {
+    main {
+        padding: 32px 16px 60px;
+    }
+    
+    header {
+        padding: 16px;
+    }
+
+    header nav {
+        gap: 18px;
+    }
+
+    .card, .card-tier, .team-card, .branch-card, .form-section {
+        padding: 20px;
+    }
+}

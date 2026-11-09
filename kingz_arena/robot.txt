@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow access 
+Disallow: /_css/
+Disallow: /_js/
+Disallow: /_videos/
+
+Sitemap: https://kingz_arena.com/sitemap.xml

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about King'z Arena, our vision, mission, and the team behind the ultimate esports experience, it's in the Game!!.">
+    <meta name="keywords" content="King'z Arena, esports, gaming, gaming center, competitive gaming, gaming community">
+    <meta name="author" content="King'z Arena">
+    <link rel="stylesheet" href="_css/style.css">
+    <title>King'z Arena - About</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="main-title" class="fade-text">About King'z Arena</h1>
+        <nav aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="products.html">Products</a>
+            <a href="enquire.html">Enquire</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="grid-layout">
+            <section class="card">
+                <h2>Our Vision</h2>
+                <p>King'z Arena was forged in 2024 to provide an immersive, latency-free sanctuary for both casual
+                    players and competitive esports athletes. We got tired of high ping and bad vibes, so we built our
+                    own battleground.</p>
+                <div class="media-container">
+                    <img src="_images/room.jpg"
+                    srcset="_images/room.jpg 480w, _images/room.jpg 800w, _images/room.jpg 1200w"
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                       alt="Gaming room with gaming PC and console"
+                          class="fluid-media" width="600" height="400" loading="lazy">
+                </div>
+            </section>
+
+           <section class="card">
+                <h2>The Mission</h2>
+                <p>To foster the most cutthroat, yet inclusive, esports environment in South Africa. No lag, no excuses.</p>
+                <ul class="mission-list feature-list">
+                    <li>Fiber-optic gigabit dedicated lines</li>
+                    <li>24/7 energy drink and snack bar</li>
+                    <li>On-site tech support and tournament referees</li>
+                </ul>
+
+                <h3 class="quote-title">The Origin Story</h3>
+                <p>What started as a basement LAN party among three friends rapidly evolved into a city-wide phenomenon. We recognized a desperate need for a dedicated space where local talent could train on professional-grade hardware without the barrier of entry costs. Today, King'z Arena stands as the premier proving ground for the next generation of esports champions.</p>
+                
+                <blockquote class="quote-block">
+                    "The only place in the city where my ping drops below 10ms. The Throne Room setup is undefeated."
+                    <footer>
+                        <cite>&mdash; Viper_ZA (Local Tekken Champion)</cite>
+                    </footer>
+                </blockquote>
+
+                <!-- MOVED VIDEO SECTION -->
+                <div class="media-container mission-video-wrapper">
+                    <video class="hero-video fluid-media" autoplay muted loop playsinline aria-hidden="true">
+                        <source src="_videos/ps4-gaming.mp4" type="video/mp4">
+                    </video>
+                    <div class="mission-video-overlay">
+                        <h2>The Ultimate Proving Ground</h2>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- Team Section -->
+        <section class="card team-section">
+            <h2>Meet the Overlords</h2>
+            <p>The architects behind the arena. We game, we build, we conquer.</p>
+
+            <div class="flex-container">
+                <div class="team-card">
+                    <img src="_images/founder.jpg" alt="King- Founder" class="avatar-img" width="150" height="150" loading="lazy">
+                    <h3>King</h3>
+                    <p class="team-role">Founder & CEO</p>
+                    <p class="team-desc">Mastermind of the King'z network and lead tournament organizer.</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="_images/andile.jpg" alt="Tech Lead" class="avatar-img" width="150" height="150" loading="lazy">
+                    <h3>Andile "Glitch"</h3>
+                    <p class="team-role">Head Technician</p>
+                    <p class="team-desc">Keeps the frames high, temperatures low, and the network flawless.</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="_images/karen.jpg" alt="Community Manager" class="avatar-img" width="150" height="150" loading="lazy">
+                    <h3>Karen "Valkyrie"</h3>
+                    <p class="team-role">Community Lead</p>
+                    <p class="team-desc">Runs the Discord, manages events, and hands out the prize money.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section class="card gallery-section">
+            <h2>The Arena Gallery</h2>
+            <p class="gallery-hint">Click any image to enlarge.</p>
+            <div class="image-gallery">
+                <img src="_images/room.jpg" width="150" alt="High performance gaming room" class="lightbox-trigger fluid-media" tabindex="0">
+                <img src="_images/setup.jpg" width="150" alt="Professional Esports Setup" class="lightbox-trigger fluid-media" tabindex="0">
+                <img src="_images/controller.jpg" width="150" alt="Pro Controller for tournaments" class="lightbox-trigger fluid-media" tabindex="0">
+                <img src="_images/escape.jpg" width="150" alt="Interactive Escape Room" class="lightbox-trigger fluid-media" tabindex="0">
+            </div>
+        </section>
+    </main>
+
+    <!-- The Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image Gallery Lightbox">
+        <span class="lightbox-close" aria-label="Close Modal" tabindex="0" role="button">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged gallery image">
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 King'z Arena. All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="_js/script.js"></script>
+</body>
+
+</html>

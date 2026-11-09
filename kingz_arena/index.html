@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="King'z Arena is a high-performance gaming lounge offering low-latency gaming, local tournaments and easy online booking.">
+    <link rel="stylesheet" href="_css/style.css">
+    <title>King'z Arena - Home</title>
+</head>
+
+<body>
+    <!-- HEADER: Contains site navigation -->
+    <header>
+        <h1 id="main-title" class="fade-text">Welcome to King'z Arena</h1>
+        <nav aria-label="Main Navigation">
+            <a href="index.html" class="active" aria-current="page">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="enquire.html">Enquire</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- home  container -->
+    <main id="main-content" class="layout-home">
+
+        <!-- Hero Section: Background video loop-->
+        <section class="hero-section card">
+            <div class="media-container hero-video-wrapper">
+                <video class="hero-video fluid-media" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+                    <source src="_videos/gaming.mp4" type="video/webm">
+                    <source src="_videos/gaming.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="hero-content">
+                <h2>It's in the Game</h2>
+                <p>Experience <strong>ultra-high performance</strong>, low-latency gaming like never before and compete
+                    in local gaming tournaments!</p>
+
+                <div class="cta-container">
+                    <a href="enquire.html" class="btn-cta">Book Your Slot Now</a>
+                    <a href="products.html" class="btn-cta btn-outline">View Packages</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Info-->
+        <section class="stat-strip-wrapper">
+            <ul class="stat-strip" aria-label="Arena quick facts">
+                <li class="stat-card"><strong>R120</strong> <span>Packages from</span></li>
+                <li class="stat-card"><strong>2</strong> <span>City branches</span></li>
+                <li class="stat-card"><strong>10AM - 10PM</strong> <span>Mon - Sat</span></li>
+                <li class="stat-card"><strong>6 Hrs</strong> <span>Longest session</span></li>
+            </ul>
+        </section>
+
+        <!-- Features & Tournaments Grid Section -->
+        <div class="grid-layout">
+
+            <!-- Core infrastructure highlights -->
+            <section class="features-section card">
+                <h2>Arena Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <img class="feature-icon" src="_images/esports.jpg" alt="esports gaming" width="64" height="64">
+                        <div>
+                            <strong>State-of-the-art</strong> gaming equipment
+                            <p>Gaming PCs, consoles and VR for every skill level.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="feature-icon" src="_images/racing.jpg" alt="racing games" width="64" height="64">
+                        <div>
+                            <strong>High-speed</strong> internet connectivity
+                            <p>Low latency so every move counts.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="feature-icon" src="_images/vr.jpg" alt="virtual reality gaming" width="64"
+                            height="64">
+                        <div>
+                            <strong>Professional-grade</strong> sound system
+                            <p>Immersive audio for games and tournaments.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="feature-icon" src="_images/vip.jpg" alt="game with friends" width="64" height="64">
+                        <div>
+                            <strong>Comfortable</strong> seating arrangements
+                            <p>Built for long sessions with friends.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Tournaments Call-out: Highlight for esports events -->
+            <section class="tournament-section card">
+                <h2>Local Tournaments</h2>
+                <div class="media-container">
+                    <img src="_images/setup.jpg"
+                        srcset="_images/setup.jpg 480w, _images/setup.jpg 800w, _images/setup.jpg 1200w"
+                        sizes="(max-width: 768px) 100vw, 50vw" alt="A King'z Arena gaming setup ready for a tournament"
+                        class="fluid-media" loading="lazy" width="100" height="80">
+                </div>
+                <p>Compete against other local gamers. Ask our esports team about upcoming events.</p>
+                <a href="contact.html" class="btn-cta">Tournament Info</a>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER-->
+    <footer>
+        <p>&copy; 2026 King'z Arena. All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="_js/script.js"></script>
+</body>
+
+</html>
